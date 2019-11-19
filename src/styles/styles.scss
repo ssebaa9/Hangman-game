@@ -1,0 +1,8 @@
+@import './settings/variables';
+@import './settings/reset';
+@import './settings/base';
+@import './components/Header/header';
+@import './containers/Hangman/hangman';
+@import './components/UI/modal';
+@import './components/UI/button';
+@import './components/LooserOrWinner/looserOrWinner';

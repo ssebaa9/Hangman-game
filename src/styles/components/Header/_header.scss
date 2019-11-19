@@ -1,0 +1,15 @@
+.header {
+  margin: $box-base-size * 3 0 ;
+  text-align: center;
+}
+
+.header__title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.header__subtitle {
+  color: lighten($color-dark, 50%);
+}
+

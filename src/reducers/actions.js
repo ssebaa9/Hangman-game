@@ -1,0 +1,7 @@
+export const ADD_CORRECT_LETTER = 'ADD_CORRECT_LETTER';
+export const ADD_INCORRECT_LETTER = 'DELETE_CORRECT_LETTER';
+export const POINTS = 'POINTS';
+export const RESET = 'RESET';
+export const ERR_WRONG_VALUE = 'ERR_WRONG_VALUE';
+export const ERR_DUBBLE_LETTER = 'ERR_DUBBLE_LETTER';
+export const SHOW_MODAL = 'SHOW_MODAL';

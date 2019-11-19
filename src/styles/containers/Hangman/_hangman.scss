@@ -1,0 +1,43 @@
+.hangman__result {
+  margin-bottom: $box-base-size *3;
+  padding: $box-base-size *2 $box-base-size / 2;
+  background-color: lighten($color-dark, 75%);
+  color: $color-dark;
+}
+
+.hangman__result-word {
+  text-align: center;
+  margin: $box-base-size * 3 0;
+  font-size: $font-base-size * 1.5;
+}
+
+.hangman__form-container {
+  margin-top: $box-base-size * 2;
+  text-align: center;
+}
+
+.hangman__form-container__input {
+  width: 80px;
+  text-align: center;
+  font-size: $font-base-size *1.5;
+  padding: $box-base-size;
+  margin-right: 8px;
+  border: none;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  outline: none;
+}
+
+.hangman__form-container__input:focus {
+  border:  none;
+  background-color: lighten($color-dark, 50%);
+}
+
+
+.hangman__error {
+  display: block;
+  margin-top: $box-base-size * 2;
+  font-weight: 300;
+  color: rgb(151, 106, 8);
+}

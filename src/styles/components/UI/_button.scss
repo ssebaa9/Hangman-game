@@ -1,0 +1,28 @@
+.hangman__form-container__btn {
+  font-size: $font-base-size *1.5;
+  padding: $box-base-size;
+  border: none;
+  background-color: lighten($color-dark, 50%);
+  color: $color-dark;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.hangman__form-container__btn:hover {
+  background-color: white;
+}
+
+.looserOrWinner__btn {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  transition: .3s;
+}
+
+.looserOrWinner__btn:hover {
+  background-color: #ccc;
+}

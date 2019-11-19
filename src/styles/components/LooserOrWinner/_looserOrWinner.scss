@@ -1,0 +1,21 @@
+.looserOrWinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__result {
+    text-transform: uppercase;
+    margin: $box-base-size 0;
+    font-weight: bold;
+  }
+
+  &__word {
+    font-size: $font-base-size * 1.5;
+    display: block;
+    text-transform: uppercase;
+    margin: $box-base-size 0;
+    letter-spacing: 1px;
+    text-decoration: underline;
+  }
+}

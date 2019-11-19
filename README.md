@@ -14,7 +14,7 @@ Open terminal,
 Change the current working directory to the location where you want the cloned directory to be made,
 Paste:
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/ssebaa9/Hangman-game.git
 ```
 Press Enter. Your local clone will be created.
 

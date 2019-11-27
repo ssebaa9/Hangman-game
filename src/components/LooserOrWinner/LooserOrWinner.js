@@ -29,7 +29,7 @@ const looserOrWinner = (props) => {
 
 const mapStateToProps = state => {
   return {
-    word: state.randomWordArray
+    word: state.word
   }
 }
 

@@ -15,7 +15,6 @@ const fetchWordsFail = (error) => {
   }
 }
 
-
 export const fetchWords = () => {
   return dispatch => {
     axios.get('https://hangman-app-9e85e.firebaseio.com/words.json')
@@ -26,14 +25,42 @@ export const fetchWords = () => {
       })
       .then(words => {
         const randomNumber = Math.floor(Math.random() * words.length);
-        const word = words[randomNumber].name.split('');
-        dispatch(fetchWordsSuccess(word));
+        const wordToArray = words[randomNumber].name.split('');
+        dispatch(fetchWordsSuccess(wordToArray));
       })
       .catch(err => {
         dispatch(fetchWordsFail(err))
       })
   }
 }
+
+export const resetHangmanGame = () => {
+  return dispatch => {
+    axios.get('https://hangman-app-9e85e.firebaseio.com/words.json')
+      .then(resp => {
+        if (resp.status === 200) {
+          return resp.data
+        }
+      })
+      .then(words => {
+        const randomNumber = Math.floor(Math.random() * words.length);
+        const wordToArray = words[randomNumber].name.split('');
+        dispatch(resetHangman(wordToArray));
+      })
+      .catch(err => {
+        dispatch(fetchWordsFail(err))
+      })
+  }
+}
+
+
+export const resetHangman = (word) => {
+  return {
+    type: actionTypes.RESET,
+    word
+  }
+}
+
 
 export const showModal = () => {
   return {
@@ -72,12 +99,5 @@ export const checkDubbleLetter = () => {
     type: actionTypes.ERR_DUBBLE_LETTER
   }
 }
-
-export const resetHangmanGame = () => {
-  return {
-    type: actionTypes.RESET
-  }
-}
-
 
 

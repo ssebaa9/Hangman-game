@@ -54,27 +54,29 @@ class Hangman extends Component {
     let showWinOrLoose = null;
     let puzzle = '';
 
-    word.forEach(letter => {
-      if (correctLetters.includes(letter)) {
-        puzzleArray.push(letter)
-        puzzle += letter + ' '
-      } else {
-        puzzle += '_ '
-      }
-    })
+    if (word) {
+      word.forEach(letter => {
+        if (correctLetters.includes(letter)) {
+          puzzleArray.push(letter)
+          puzzle += letter + ' '
+        } else {
+          puzzle += '_ '
+        }
+      })
 
-    if (points === 0) {
-      this.props.onShowModal()
-      showWinOrLoose =
-        <LooserOrWinner
-          case='loose'
-        />
-    } else if (word.length === puzzleArray.length) {
-      this.props.onShowModal()
-      showWinOrLoose =
-        <LooserOrWinner
-          case='win'
-        />
+      if (points === 0) {
+        this.props.onShowModal()
+        showWinOrLoose =
+          <LooserOrWinner
+            case='loose'
+          />
+      } else if (word.length === puzzleArray.length) {
+        this.props.onShowModal()
+        showWinOrLoose =
+          <LooserOrWinner
+            case='win'
+          />
+      }
     }
 
 
@@ -104,7 +106,7 @@ class Hangman extends Component {
 
 const mapStateToProps = state => {
   return {
-    word: state.randomWordArray,
+    word: state.word,
     showModal: state.showModal,
     correctLetters: state.correctLetters,
     incorrectLetters: state.incorrectLetters,

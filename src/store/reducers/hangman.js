@@ -1,8 +1,7 @@
-import words from '../../data/words';
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-  randomWordArray: words[Math.floor(Math.random() * words.length)].toLowerCase().split(''),
+  word: '',
   showModal: false,
   correctLetters: [],
   incorrectLetters: [],
@@ -13,7 +12,15 @@ const initialState = {
 
 const hangman = (state = initialState, action) => {
   switch (action.type) {
-
+    case actionTypes.FETCH_WORDS_SUCCESS:
+      return {
+        ...state,
+        word: action.word
+      }
+    case actionTypes.FETCH_WORDS_FAIL:
+      return {
+        ...state
+      }
     case actionTypes.SHOW_MODAL:
       return {
         ...state,
@@ -50,7 +57,7 @@ const hangman = (state = initialState, action) => {
     case actionTypes.RESET:
       return {
         ...state,
-        randomWordArray: words[Math.floor(Math.random() * words.length)].toLowerCase().split(''),
+        word: action.word,
         showModal: false,
         correctLetters: [],
         incorrectLetters: [],

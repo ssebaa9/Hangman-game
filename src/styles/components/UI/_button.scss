@@ -6,6 +6,7 @@
   color: $color-dark;
   font-weight: bold;
   transition: .3s;
+  cursor: pointer;
 }
 
 .hangman__form-container__btn:hover {
@@ -20,7 +21,9 @@
   background-color: black;
   color: white;
   padding: 5px 15px;
+  margin-top: 20px;
   transition: .3s;
+  cursor: pointer;
 }
 
 .looserOrWinner__btn:hover {

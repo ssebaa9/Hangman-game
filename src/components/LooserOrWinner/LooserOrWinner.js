@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from '../UI/Button/Button';
 import { connect } from 'react-redux'
-import * as actionTypes from '../../reducers/actions';
+
+import * as actions from '../../store/actions/index';
 
 const looserOrWinner = (props) => {
   let looseOrWin = null
@@ -28,13 +29,13 @@ const looserOrWinner = (props) => {
 
 const mapStateToProps = state => {
   return {
-    word: state.mainReducer.randomWordArray
+    word: state.randomWordArray
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onResetHagmanGame: () => dispatch({ type: actionTypes.RESET }),
+    onResetHagmanGame: () => dispatch(actions.resetHangmanGame()),
   }
 }
 

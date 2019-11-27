@@ -24,7 +24,7 @@ const modal = (props) => {
 
 const mapStateToProps = state => {
   return {
-    showModal: state.mainReducer.showModal
+    showModal: state.showModal
   }
 }
 

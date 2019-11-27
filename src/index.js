@@ -3,22 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './styles/styles.scss';
 
-import { createStore, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
-import mainReducer from './reducers/mainReducer';
-import lettersReducer from './reducers/letters/letters';
-import pointsReducer from './reducers/points/points';
-import errorsReducer from './reducers/errors/errors';
+import hangmanReducer from './store/reducers/hangman';
 
-const rootReducer = combineReducers({
-  mainReducer: mainReducer,
-  letters: lettersReducer,
-  points: pointsReducer,
-  err: errorsReducer
-})
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer)
+const store = createStore(hangmanReducer, composeEnhancers(
+  applyMiddleware(thunk)
+))
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

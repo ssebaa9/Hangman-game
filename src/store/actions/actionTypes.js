@@ -5,3 +5,8 @@ export const RESET = 'RESET';
 export const ERR_WRONG_VALUE = 'ERR_WRONG_VALUE';
 export const ERR_DUBBLE_LETTER = 'ERR_DUBBLE_LETTER';
 export const SHOW_MODAL = 'SHOW_MODAL';
+
+
+export const FETCH_WORDS_SUCCESS = 'FETCH_WORDS_SUCCESS';
+export const FETCH_WORDS_FAIL = 'FETCH_WORDS_FAIL';
+

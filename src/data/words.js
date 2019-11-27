@@ -92,7 +92,7 @@ const words = ["adult", "advice", 'attempt', 'august', 'border', 'breeze', 'calm
   'vapor',
   'vessels',
   'wealth',
-  'wolf',]
+  'wolf']
 
 
 export default words;

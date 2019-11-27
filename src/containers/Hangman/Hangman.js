@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LooserOrWinner from '../../components/LooserOrWinner/LooserOrWinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 import { connect } from 'react-redux'
 import * as actions from '../../store/actions/index';
@@ -52,9 +53,10 @@ class Hangman extends Component {
 
     const puzzleArray = []
     let showWinOrLoose = null;
-    let puzzle = '';
+    let puzzle = <Spinner />;
 
     if (word) {
+      puzzle = '';
       word.forEach(letter => {
         if (correctLetters.includes(letter)) {
           puzzleArray.push(letter)
@@ -85,7 +87,7 @@ class Hangman extends Component {
         <div className="hangman__result">
           <p>Incorrect letters: {incorrectLetters.join()} </p>
           <p>Points: <strong>{points}</strong></p>
-          <p className="hangman__result-word"><strong>{puzzle}</strong></p>
+          <div className="hangman__result-word"><strong>{puzzle}</strong></div>
         </div>
         <div className="hangman__form-container">
           <form onSubmit={this.handleCheckCorrectLetter} >

@@ -49,8 +49,6 @@ class Hangman extends Component {
   render() {
     const { points, word, err, correctLetters, incorrectLetters } = this.props
 
-    console.log(word)
-
     const puzzleArray = []
     let showWinOrLoose = null;
     let puzzle = <Spinner />;

@@ -4,6 +4,8 @@
 Hangman Game, created in React. 
 Try to guess the word.
 
+* [firebase hosting](https://hangman-game-debicki.firebaseapp.com/ )
+
 ## Getting Started
 
 To run the project, follow the steps below.

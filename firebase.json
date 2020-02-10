@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "hangman-game-debicki",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
+  }
+}
